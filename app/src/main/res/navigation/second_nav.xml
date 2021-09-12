@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/second_nav"
+    app:startDestination="@id/dashBoardFragment">
+    <fragment
+        android:id="@+id/dashBoardFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.dashboard.DashBoardFragment"
+        android:label="dash_board_fragment"
+        tools:layout="@layout/dash_board_fragment" />
+    <fragment
+        android:id="@+id/appointmentListFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.appointment_list.AppointmentListFragment"
+        android:label="appointment_list_fragment"
+        tools:layout="@layout/appointment_list_fragment" />
+    <fragment
+        android:id="@+id/financeFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.finance.FinanceFragment"
+        android:label="finance_fragment"
+        tools:layout="@layout/finance_fragment" />
+    <fragment
+        android:id="@+id/patientFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.patient.PatientFragment"
+        android:label="patient_fragment"
+        tools:layout="@layout/patient_fragment" >
+        <action
+            android:id="@+id/action_patientFragment_to_patientDetailsFragment"
+            app:destination="@id/patientDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myClinicFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.my_clinic.MyClinicFragment"
+        android:label="MyClinicFragment"
+        tools:layout="@layout/my_clinic_fragment">
+        <action
+            android:id="@+id/action_myClinicFragment_to_clinicProfileFragment"
+            app:destination="@id/clinicProfileFragment" />
+        <action
+            android:id="@+id/action_myClinicFragment_to_drugListFragment"
+            app:destination="@id/drugListFragment" />
+        <action
+            android:id="@+id/action_myClinicFragment_to_proceduresFragment"
+            app:destination="@id/proceduresFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientDetailsFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.patient_details.PatientDetailsFragment"
+        android:label="patient_details_fragment"
+        tools:layout="@layout/patient_details_fragment" />
+    <fragment
+        android:id="@+id/clinicProfileFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.clinic_profile.ClinicProfileFragment"
+        android:label="clinic_profile_fragment"
+        tools:layout="@layout/clinic_profile_fragment" />
+    <fragment
+        android:id="@+id/drugListFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.drug_list.DrugListFragment"
+        android:label="drug_list_fragment"
+        tools:layout="@layout/drug_list_fragment" />
+    <fragment
+        android:id="@+id/proceduresFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.procedures.ProceduresFragment"
+        android:label="procedures_fragment"
+        tools:layout="@layout/procedures_fragment" />
+</navigation>

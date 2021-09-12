@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group
+        android:id="@+id/grp_2"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/dashBoardFragment"
+            android:icon="@drawable/ic_baseline_dashboard_24"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/myClinicFragment"
+            android:icon="@drawable/ic_baseline_home_work_24"
+            android:title="My Clinic" />
+        <item
+            android:id="@+id/appointmentListFragment"
+            android:icon="@drawable/ic_baseline_calendar_today_24"
+            android:title="Appointment" />
+        <item
+            android:id="@+id/patientFragment"
+            android:icon="@drawable/ic_baseline_airline_seat_recline_extra_24_black"
+            android:title="Patient" />
+        <item
+            android:id="@+id/financeFragment"
+            android:icon="@drawable/ic_baseline_monetization_on_24"
+            android:title="Finance" />
+
+
+    </group>
+
+
+</menu>

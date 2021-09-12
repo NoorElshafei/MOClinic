@@ -1,31 +1,31 @@
-package com.clinicapp.moclinic.ui.fragments.clinic_profile
+package com.clinicapp.moclinic.ui.fragments.add_procedures
 
+import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import com.clinicapp.moclinic.R
 
-class ClinicProfileFragment : Fragment() {
+class AddProcedureFragment : Fragment() {
 
     companion object {
-        fun newInstance() = ClinicProfileFragment()
+        fun newInstance() = AddProcedureFragment()
     }
 
-    private lateinit var viewModel: ClinicProfileViewModel
+    private lateinit var viewModel: AddProcedureViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.clinic_profile_fragment, container, false)
+        return inflater.inflate(R.layout.add_procedure_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ClinicProfileViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(AddProcedureViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

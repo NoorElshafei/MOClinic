@@ -7,7 +7,7 @@
     tools:context=".ui.fragments.drug_list.DrugListFragment">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/add_procedure"
+        android:id="@+id/add_drug"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentEnd="true"
@@ -54,7 +54,7 @@
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/procedures_recycler"
+            android:id="@+id/drugs_recycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:listitem="@layout/drug_item" />

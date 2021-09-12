@@ -1,4 +1,4 @@
-package com.clinicapp.moclinic.ui.fragments.clinic_profile
+package com.clinicapp.moclinic.ui.fragments.add_schedule_existing
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,24 +8,24 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.clinicapp.moclinic.R
 
-class ClinicProfileFragment : Fragment() {
+class AddScheduleExistingFragment : Fragment() {
 
     companion object {
-        fun newInstance() = ClinicProfileFragment()
+        fun newInstance() = AddScheduleExistingFragment()
     }
 
-    private lateinit var viewModel: ClinicProfileViewModel
+    private lateinit var viewModel: AddScheduleExistingViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.clinic_profile_fragment, container, false)
+        return inflater.inflate(R.layout.add_schedule_existing_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ClinicProfileViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(AddScheduleExistingViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

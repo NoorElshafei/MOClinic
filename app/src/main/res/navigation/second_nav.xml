@@ -8,7 +8,17 @@
         android:id="@+id/dashBoardFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.dashboard.DashBoardFragment"
         android:label="dash_board_fragment"
-        tools:layout="@layout/dash_board_fragment" />
+        tools:layout="@layout/dash_board_fragment" >
+        <action
+            android:id="@+id/action_dashBoardFragment_to_addScheduleExistingFragment"
+            app:destination="@id/addScheduleExistingFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_addScheduleNewFragment"
+            app:destination="@id/addScheduleNewFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_addScheduleSelectFragment"
+            app:destination="@id/addScheduleSelectFragment" />
+    </fragment>
     <fragment
         android:id="@+id/appointmentListFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.appointment_list.AppointmentListFragment"
@@ -47,7 +57,11 @@
         android:id="@+id/patientDetailsFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.patient_details.PatientDetailsFragment"
         android:label="patient_details_fragment"
-        tools:layout="@layout/patient_details_fragment" />
+        tools:layout="@layout/patient_details_fragment" >
+        <action
+            android:id="@+id/action_patientDetailsFragment_to_addEditPatientProfileFragment"
+            app:destination="@id/addEditPatientProfileFragment" />
+    </fragment>
     <fragment
         android:id="@+id/clinicProfileFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.clinic_profile.ClinicProfileFragment"
@@ -57,10 +71,48 @@
         android:id="@+id/drugListFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.drug_list.DrugListFragment"
         android:label="drug_list_fragment"
-        tools:layout="@layout/drug_list_fragment" />
+        tools:layout="@layout/drug_list_fragment" >
+        <action
+            android:id="@+id/action_drugListFragment_to_addDrugFragment"
+            app:destination="@id/addDrugFragment" />
+    </fragment>
     <fragment
         android:id="@+id/proceduresFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.procedures.ProceduresFragment"
         android:label="procedures_fragment"
-        tools:layout="@layout/procedures_fragment" />
+        tools:layout="@layout/procedures_fragment" >
+        <action
+            android:id="@+id/action_proceduresFragment_to_addProcedureFragment"
+            app:destination="@id/addProcedureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addDrugFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.add_drug.AddDrugFragment"
+        android:label="add_drug_fragment"
+        tools:layout="@layout/add_drug_fragment" />
+    <fragment
+        android:id="@+id/addEditPatientProfileFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.add_edit_patient_profile.AddEditPatientProfileFragment"
+        android:label="add_edit_patient_profile_fragment"
+        tools:layout="@layout/add_edit_patient_profile_fragment" />
+    <fragment
+        android:id="@+id/addProcedureFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.add_procedures.AddProcedureFragment"
+        android:label="add_procedure_fragment"
+        tools:layout="@layout/add_procedure_fragment" />
+    <fragment
+        android:id="@+id/addScheduleExistingFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.add_schedule_existing.AddScheduleExistingFragment"
+        android:label="add_schedule_existing_fragment"
+        tools:layout="@layout/add_schedule_existing_fragment" />
+    <fragment
+        android:id="@+id/addScheduleNewFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.add_schedule_new.AddScheduleNewFragment"
+        android:label="add_schedule_new_fragment"
+        tools:layout="@layout/add_schedule_new_fragment" />
+    <fragment
+        android:id="@+id/addScheduleSelectFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.add_schedule_select_patient.AddScheduleSelectFragment"
+        android:label="add_schedule_select_fragment"
+        tools:layout="@layout/add_schedule_select_fragment" />
 </navigation>

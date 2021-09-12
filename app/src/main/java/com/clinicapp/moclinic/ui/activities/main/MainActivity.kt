@@ -10,53 +10,57 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.clinicapp.moclinic.R
+import com.clinicapp.moclinic.databinding.ActivityMainBinding
 import com.google.android.material.appbar.AppBarLayout
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.app_bar.*
+
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private var navController: NavController? = null
     private var appBarConfiguration: AppBarConfiguration? = null
+    private var binding: ActivityMainBinding? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding!!.root)
+
 
         // setSupportActionBar(toolbar)
         navController = findNavController(R.id.nav_host_fragment1)
         //setupActionBarWithNavController(navController!!,drawer_layout)
-        nav_view.setupWithNavController(navController!!)
-        appBarConfiguration = AppBarConfiguration(navController!!.graph, drawer_layout)
+        binding!!.navView.setupWithNavController(navController!!)
+        appBarConfiguration = AppBarConfiguration(navController!!.graph, binding!!.drawerLayout)
 
 
-        menu_image.setOnClickListener(this)
-        back_image.setOnClickListener(this)
+        binding!!.contentLayout.menuImage.setOnClickListener(this)
+        binding!!.contentLayout.backImage.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         when (v) {
-            menu_image -> {
+            binding!!.contentLayout.menuImage -> {
                 if (getDrawer()!!.isDrawerOpen(GravityCompat.START)) {
                     getDrawer()!!.closeDrawer(GravityCompat.START)
                 } else {
                     getDrawer()!!.openDrawer(GravityCompat.START)
                 }
             }
-            back_image -> {
+            binding!!.contentLayout.backImage -> {
                 onBackPressed()
             }
         }
     }
 
     private fun getDrawer(): DrawerLayout? {
-        return drawer_layout
+        return binding?.drawerLayout
     }
 
     fun getAppBar1(): AppBarLayout? {
-        return app_bar_container
+        return binding?.contentLayout?.appBarContainer
     }
 
     fun getAppBar2(): AppBarLayout? {
-        return app_bar_container2
+        return binding?.contentLayout?.appBarContainer2
     }
 
 

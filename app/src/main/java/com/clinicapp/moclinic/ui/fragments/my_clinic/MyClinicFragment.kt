@@ -8,10 +8,12 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.clinicapp.moclinic.R
+import com.clinicapp.moclinic.databinding.DrugListFragmentBinding
+import com.clinicapp.moclinic.databinding.MyClinicFragmentBinding
 import com.clinicapp.moclinic.ui.activities.main.MainActivity
-import kotlinx.android.synthetic.main.my_clinic_fragment.*
 
 class MyClinicFragment : Fragment() {
+    private var binding: MyClinicFragmentBinding? = null
 
     companion object {
         fun newInstance() = MyClinicFragment()
@@ -23,7 +25,8 @@ class MyClinicFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.my_clinic_fragment, container, false)
+        binding = MyClinicFragmentBinding.inflate(inflater, container, false)
+        return binding!!.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -41,14 +44,14 @@ class MyClinicFragment : Fragment() {
 
 
     private fun onClick() {
-        clinic_profile.setOnClickListener {
+        binding!!.clinicProfile.setOnClickListener {
             findNavController().navigate(R.id.action_myClinicFragment_to_clinicProfileFragment)
         }
-        drug_list_layout.setOnClickListener {
+        binding!!.drugListLayout.setOnClickListener {
             findNavController().navigate(R.id.action_myClinicFragment_to_drugListFragment)
 
         }
-        procedure_Linear.setOnClickListener {
+        binding!!.procedureLinear.setOnClickListener {
             findNavController().navigate(R.id.action_myClinicFragment_to_proceduresFragment)
 
         }

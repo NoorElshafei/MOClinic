@@ -10,11 +10,14 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.clinicapp.moclinic.R
+import com.clinicapp.moclinic.databinding.MyClinicFragmentBinding
+import com.clinicapp.moclinic.databinding.PatientFragmentBinding
 import com.clinicapp.moclinic.ui.activities.main.MainActivity
 import com.clinicapp.moclinic.ui.adapters.PatientAdapter
-import kotlinx.android.synthetic.main.patient_fragment.*
 
 class PatientFragment : Fragment() {
+    private var binding: PatientFragmentBinding? = null
+
 
     companion object {
         fun newInstance() = PatientFragment()
@@ -26,7 +29,8 @@ class PatientFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.patient_fragment, container, false)
+        binding = PatientFragmentBinding.inflate(inflater, container, false)
+        return binding!!.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -35,16 +39,13 @@ class PatientFragment : Fragment() {
         // TODO: Use the ViewModel
 
         // TODO: Use the ViewModel
-        patient_recycler.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
+        binding?.patientRecycler?.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
 
         val patientAdapter = PatientAdapter(context, activity)
 
-        patient_recycler.adapter = patientAdapter
+        binding?.patientRecycler?.adapter = patientAdapter
 
-        dflk.setOnClickListener {
-            findNavController().navigate(R.id.action_patientFragment_to_patientDetailsFragment)
 
-        }
     }
 
     override fun onStart() {

@@ -1,14 +1,21 @@
 package com.clinicapp.moclinic.ui.fragments.procedures
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.clinicapp.moclinic.R
+import com.clinicapp.moclinic.databinding.ProceduresFragmentBinding
+import com.clinicapp.moclinic.ui.adapters.ProceduresAdapter
 
 class ProceduresFragment : Fragment() {
+    private var binding: ProceduresFragmentBinding? = null
+
 
     companion object {
         fun newInstance() = ProceduresFragment()
@@ -20,13 +27,26 @@ class ProceduresFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.procedures_fragment, container, false)
+        binding = ProceduresFragmentBinding.inflate(inflater, container, false)
+        return binding!!.root
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(ProceduresViewModel::class.java)
         // TODO: Use the ViewModel
-    }
 
+
+        binding?.proceduresRecycler?.layoutManager =
+            LinearLayoutManager(context, RecyclerView.VERTICAL, false)
+
+        val proceduresAdapter = ProceduresAdapter(context, activity)
+
+        binding?.proceduresRecycler?.adapter = proceduresAdapter
+
+        binding?.addProcedure?.setOnClickListener {
+            findNavController().navigate(R.id.action_proceduresFragment_to_addProcedureFragment)
+        }
+    }
 }

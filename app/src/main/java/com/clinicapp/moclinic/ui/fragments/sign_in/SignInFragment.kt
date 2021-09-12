@@ -8,9 +8,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.clinicapp.moclinic.R
-import kotlinx.android.synthetic.main.sign_in_fragment.*
+import com.clinicapp.moclinic.databinding.SignInFragmentBinding
 
 class SignInFragment : Fragment(), View.OnClickListener {
+    private var binding: SignInFragmentBinding? = null
+
 
     companion object {
         fun newInstance() = SignInFragment()
@@ -22,7 +24,8 @@ class SignInFragment : Fragment(), View.OnClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.sign_in_fragment, container, false)
+        binding = SignInFragmentBinding.inflate(inflater, container, false)
+        return binding!!.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -30,12 +33,12 @@ class SignInFragment : Fragment(), View.OnClickListener {
         viewModel = ViewModelProvider(this).get(SignInViewModel::class.java)
         // TODO: Use the ViewModel
 
-        sign_in_button.setOnClickListener(this)
+        binding?.signInButton?.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         when (v) {
-            sign_in_button -> findNavController().navigate(R.id.action_signInFragment_to_mainActivity)
+            binding?.signInButton -> findNavController().navigate(R.id.action_signInFragment_to_mainActivity)
         }
     }
 

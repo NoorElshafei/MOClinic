@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.medical_history.add_medical_history.AddMedicalHistoryFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_marginStart="@dimen/_9sdp"
+                android:src="@drawable/defualt_image"
+                android:background="#838282"
+                android:paddingTop="@dimen/_9sdp"
+                android:paddingBottom="@dimen/_9sdp"
+                android:layout_marginEnd="@dimen/_9sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/button_background"
+                    android:text="Browse"
+                    android:paddingStart="@dimen/_9sdp"
+                    android:paddingEnd="@dimen/_9sdp"
+                    android:textColor="@color/colorPrimary"
+                    android:drawablePadding="@dimen/_9sdp"
+                    android:layout_marginEnd="@dimen/_9sdp"
+                    android:drawableStart="@drawable/ic_baseline_image_24"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/button_background"
+                    android:text="Camera"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginStart="@dimen/_9sdp"
+                    android:paddingStart="@dimen/_9sdp"
+                    android:paddingEnd="@dimen/_9sdp"
+                    android:drawablePadding="@dimen/_9sdp"
+                    android:drawableStart="@drawable/ic_baseline_image_24"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*Caption"
+                android:fontFamily="@font/opensans_bold"
+                android:textColor="#000"
+                android:layout_marginTop="@dimen/_38sdp"
+                android:layout_marginStart="@dimen/_19sdp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_19sdp"
+                android:layout_marginEnd="@dimen/_9sdp"
+                android:hint="Enter Caption"/>
+
+            <RelativeLayout
+                android:id="@+id/button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                >
+
+                <Button
+                    android:id="@+id/save_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="@dimen/_19sdp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/full_rounded_bink"
+                    android:text="save"
+                    android:textColor="#FFFFFF" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

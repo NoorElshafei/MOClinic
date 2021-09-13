@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.clinicapp.moclinic.R
 import com.clinicapp.moclinic.databinding.DrugListFragmentBinding
+import com.clinicapp.moclinic.ui.activities.main.MainActivity
 import com.clinicapp.moclinic.ui.adapters.DrugAdapter
 
 class DrugListFragment : Fragment() {
@@ -47,6 +48,14 @@ class DrugListFragment : Fragment() {
         binding!!.addDrug.setOnClickListener {
             findNavController().navigate(R.id.action_drugListFragment_to_addDrugFragment)
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        (activity as MainActivity?)!!.getAppBarMain()?.visibility = View.GONE
+        (activity as MainActivity?)!!.getAppBarDetails()?.visibility = View.VISIBLE
+        (activity as MainActivity?)!!.getAppBarTitleDetails()?.text = "Drug List"
+
     }
 
 }

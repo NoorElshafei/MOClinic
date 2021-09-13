@@ -127,10 +127,10 @@
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
                     android:layout_marginBottom="6dp"
                     android:background="@drawable/calendar_background"
                     android:gravity="center"
-                    android:layout_marginTop="12dp"
                     android:orientation="horizontal"
                     android:padding="5dp">
 
@@ -418,7 +418,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_baseline_cloud_upload_24" />
+                        android:src="@drawable/ic_baseline_cloud_upload_24_blue" />
                 </LinearLayout>
 
                 <TextView
@@ -457,8 +457,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:gravity="center"
                     android:fontFamily="@font/opensans_regular"
+                    android:gravity="center"
                     android:text="Send Feedback"
                     android:textSize="12dp" />
 

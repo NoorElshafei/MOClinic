@@ -32,8 +32,10 @@ class AppointmentListFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        (activity as MainActivity?)!!.getAppBar1()?.visibility = View.VISIBLE
-        (activity as MainActivity?)!!.getAppBar2()?.visibility = View.GONE
+        (activity as MainActivity?)!!.getAppBarMain()?.visibility = View.VISIBLE
+        (activity as MainActivity?)!!.getAppBarDetails()?.visibility = View.GONE
+        (activity as MainActivity?)!!.getAppBarTitleMain()?.text = "Appointment List"
+
     }
 
 }

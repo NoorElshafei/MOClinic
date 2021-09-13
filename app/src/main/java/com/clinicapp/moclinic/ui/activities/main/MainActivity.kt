@@ -2,6 +2,7 @@ package com.clinicapp.moclinic.ui.activities.main
 
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(binding!!.root)
 
 
-        // setSupportActionBar(toolbar)
+        //setSupportActionBar(toolbar)
         navController = findNavController(R.id.nav_host_fragment1)
         //setupActionBarWithNavController(navController!!,drawer_layout)
         binding!!.navView.setupWithNavController(navController!!)
@@ -55,12 +56,20 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         return binding?.drawerLayout
     }
 
-    fun getAppBar1(): AppBarLayout? {
+    fun getAppBarMain(): AppBarLayout? {
         return binding?.contentLayout?.appBarContainer
     }
 
-    fun getAppBar2(): AppBarLayout? {
+    fun getAppBarDetails(): AppBarLayout? {
         return binding?.contentLayout?.appBarContainer2
+    }
+
+    fun getAppBarTitleMain(): TextView? {
+        return binding?.contentLayout?.appBarTitle
+    }
+
+    fun getAppBarTitleDetails(): TextView? {
+        return binding?.contentLayout?.appBarTitle1
     }
 
 

@@ -32,16 +32,20 @@ class PatientDetailsFragment : Fragment() {
         return inflater.inflate(R.layout.patient_details_fragment, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(PatientDetailsViewModel::class.java)
-        // TODO: Use the ViewModel
+
+        onClick()
     }
+
 
     override fun onStart() {
         super.onStart()
-        (activity as MainActivity?)!!.getAppBar1()?.visibility = View.GONE
-        (activity as MainActivity?)!!.getAppBar2()?.visibility = View.VISIBLE
+        (activity as MainActivity?)!!.getAppBarMain()?.visibility = View.GONE
+        (activity as MainActivity?)!!.getAppBarDetails()?.visibility = View.VISIBLE
+        (activity as MainActivity?)!!.getAppBarTitleDetails()?.text = "Patient Details"
+
     }
 
 
@@ -49,6 +53,10 @@ class PatientDetailsFragment : Fragment() {
         binding?.editProfileButton?.setOnClickListener {
             findNavController().navigate(R.id.action_patientDetailsFragment_to_addEditPatientProfileFragment)
         }
+        binding?.medicalHistory?.setOnClickListener {
+            findNavController().navigate(R.id.action_patientDetailsFragment_to_medicalHistoryFragment)
+        }
+
     }
 
 

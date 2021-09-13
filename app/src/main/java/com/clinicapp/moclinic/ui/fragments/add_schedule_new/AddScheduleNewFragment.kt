@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.clinicapp.moclinic.R
+import com.clinicapp.moclinic.ui.activities.main.MainActivity
 
 class AddScheduleNewFragment : Fragment() {
 
@@ -29,4 +30,11 @@ class AddScheduleNewFragment : Fragment() {
         // TODO: Use the ViewModel
     }
 
+    override fun onStart() {
+        super.onStart()
+        (activity as MainActivity?)!!.getAppBarMain()?.visibility = View.GONE
+        (activity as MainActivity?)!!.getAppBarDetails()?.visibility = View.VISIBLE
+        (activity as MainActivity?)!!.getAppBarTitleDetails()?.text = "Add Schedule"
+
+    }
 }

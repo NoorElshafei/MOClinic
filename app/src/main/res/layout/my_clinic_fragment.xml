@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.example.ClinicManager.ui.fragment.my_clinic.MyClinicFragment">
 
@@ -12,46 +12,48 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:gravity="center"
-        android:background="#18A2EB">
+        android:background="#18A2EB"
+        android:gravity="center">
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon_96x96"/>
+            android:src="@drawable/icon_96x96" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Smart dental clinic"
-            android:textSize="24dp"
             android:fontFamily="@font/opensans_regular"
-            android:textColor="#FFFFFF"/>
+            android:text="Smart dental clinic"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp" />
     </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/opensans_bold"
                 android:text="Clinic Menu"
                 android:textColor="@color/colorPrimary"
-                android:fontFamily="@font/opensans_bold"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="12dp"/>
+                android:textSize="16dp" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="12dp"
-                android:background="#1E000000"/>
+                android:background="#1E000000" />
 
 
             <androidx.cardview.widget.CardView
@@ -73,9 +75,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
+                        android:orientation="horizontal"
                         android:paddingTop="12dp"
-                        android:paddingBottom="12dp"
-                        android:orientation="horizontal">
+                        android:paddingBottom="12dp">
 
                         <ImageView
                             android:layout_width="0dp"
@@ -101,6 +103,7 @@
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -115,9 +118,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
+                    android:orientation="horizontal"
                     android:paddingTop="12dp"
-                    android:paddingBottom="12dp"
-                    android:orientation="horizontal">
+                    android:paddingBottom="12dp">
 
                     <ImageView
                         android:layout_width="0dp"
@@ -142,6 +145,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -152,6 +156,7 @@
                 app:cardElevation="4dp">
 
                 <LinearLayout
+                    android:id="@+id/insurance_linear"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -160,9 +165,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
+                        android:orientation="horizontal"
                         android:paddingTop="12dp"
-                        android:paddingBottom="12dp"
-                        android:orientation="horizontal">
+                        android:paddingBottom="12dp">
 
                         <ImageView
                             android:layout_width="0dp"
@@ -188,6 +193,7 @@
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -207,9 +213,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
+                        android:orientation="horizontal"
                         android:paddingTop="12dp"
-                        android:paddingBottom="12dp"
-                        android:orientation="horizontal">
+                        android:paddingBottom="12dp">
 
                         <ImageView
                             android:layout_width="0dp"
@@ -235,6 +241,7 @@
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -242,10 +249,10 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="24dp"
                 app:cardCornerRadius="8dp"
-                android:layout_marginBottom="12dp"
                 app:cardElevation="4dp">
 
                 <LinearLayout
+                    android:id="@+id/payment_method_linear"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -254,9 +261,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
+                        android:orientation="horizontal"
                         android:paddingTop="12dp"
-                        android:paddingBottom="12dp"
-                        android:orientation="horizontal">
+                        android:paddingBottom="12dp">
 
                         <ImageView
                             android:layout_width="0dp"
@@ -271,6 +278,55 @@
                             android:layout_weight="7"
                             android:fontFamily="@font/opensans_bold"
                             android:text="Payment Method"
+                            android:textSize="16dp" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:id="@+id/vaccine_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_baseline_payment_24" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="7"
+                            android:fontFamily="@font/opensans_bold"
+                            android:text="Vaccine"
                             android:textSize="16dp" />
 
                         <ImageView

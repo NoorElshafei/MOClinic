@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.clinicapp.moclinic.R
 import com.clinicapp.moclinic.databinding.ProceduresFragmentBinding
+import com.clinicapp.moclinic.ui.activities.main.MainActivity
 import com.clinicapp.moclinic.ui.adapters.ProceduresAdapter
 
 class ProceduresFragment : Fragment() {
@@ -48,5 +49,13 @@ class ProceduresFragment : Fragment() {
         binding?.addProcedure?.setOnClickListener {
             findNavController().navigate(R.id.action_proceduresFragment_to_addProcedureFragment)
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        (activity as MainActivity?)!!.getAppBarMain()?.visibility = View.GONE
+        (activity as MainActivity?)!!.getAppBarDetails()?.visibility = View.VISIBLE
+        (activity as MainActivity?)!!.getAppBarTitleDetails()?.text = "Procedures"
+
     }
 }

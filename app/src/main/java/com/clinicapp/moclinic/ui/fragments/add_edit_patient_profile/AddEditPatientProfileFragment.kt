@@ -1,12 +1,13 @@
 package com.clinicapp.moclinic.ui.fragments.add_edit_patient_profile
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.clinicapp.moclinic.R
+import com.clinicapp.moclinic.ui.activities.main.MainActivity
 
 class AddEditPatientProfileFragment : Fragment() {
 
@@ -28,5 +29,11 @@ class AddEditPatientProfileFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(AddEditPatientProfileViewModel::class.java)
         // TODO: Use the ViewModel
     }
+    override fun onStart() {
+        super.onStart()
+        (activity as MainActivity?)!!.getAppBarMain()?.visibility = View.GONE
+        (activity as MainActivity?)!!.getAppBarDetails()?.visibility = View.VISIBLE
+        (activity as MainActivity?)!!.getAppBarTitleDetails()?.text = "Add Patient"
 
+    }
 }

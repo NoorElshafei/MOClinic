@@ -6,11 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.clinicapp.moclinic.R
-import com.clinicapp.moclinic.databinding.MyClinicFragmentBinding
 import com.clinicapp.moclinic.databinding.PatientFragmentBinding
 import com.clinicapp.moclinic.ui.activities.main.MainActivity
 import com.clinicapp.moclinic.ui.adapters.PatientAdapter
@@ -38,8 +35,8 @@ class PatientFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(PatientViewModel::class.java)
         // TODO: Use the ViewModel
 
-        // TODO: Use the ViewModel
-        binding?.patientRecycler?.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
+        binding?.patientRecycler?.layoutManager =
+            LinearLayoutManager(context, RecyclerView.VERTICAL, false)
 
         val patientAdapter = PatientAdapter(context, activity)
 
@@ -50,8 +47,10 @@ class PatientFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        (activity as MainActivity?)!!.getAppBar1()?.visibility = View.VISIBLE
-        (activity as MainActivity?)!!.getAppBar2()?.visibility = View.GONE
+        (activity as MainActivity?)!!.getAppBarMain()?.visibility = View.VISIBLE
+        (activity as MainActivity?)!!.getAppBarDetails()?.visibility = View.GONE
+        (activity as MainActivity?)!!.getAppBarTitleMain()?.text = "Patient List"
+
     }
 
 

@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.clinicapp.moclinic.R
-import com.clinicapp.moclinic.databinding.DrugListFragmentBinding
 import com.clinicapp.moclinic.databinding.MyClinicFragmentBinding
 import com.clinicapp.moclinic.ui.activities.main.MainActivity
 
@@ -38,8 +37,10 @@ class MyClinicFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        (activity as MainActivity?)!!.getAppBar1()?.visibility = View.VISIBLE
-        (activity as MainActivity?)!!.getAppBar2()?.visibility = View.GONE
+        (activity as MainActivity?)!!.getAppBarMain()?.visibility = View.VISIBLE
+        (activity as MainActivity?)!!.getAppBarDetails()?.visibility = View.GONE
+        (activity as MainActivity?)!!.getAppBarTitleMain()?.text = "My Clinic"
+
     }
 
 
@@ -55,5 +56,18 @@ class MyClinicFragment : Fragment() {
             findNavController().navigate(R.id.action_myClinicFragment_to_proceduresFragment)
 
         }
+        binding!!.insuranceLinear.setOnClickListener {
+            findNavController().navigate(R.id.action_myClinicFragment_to_insuranceFragment)
+
+        }
+        binding!!.paymentMethodLinear.setOnClickListener {
+            findNavController().navigate(R.id.action_myClinicFragment_to_paymentMethodFragment)
+
+        }
+        binding!!.vaccineLinear.setOnClickListener {
+            findNavController().navigate(R.id.action_myClinicFragment_to_vaccineFragment)
+
+        }
+
     }
 }

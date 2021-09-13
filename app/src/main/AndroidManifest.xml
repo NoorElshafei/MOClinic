@@ -10,14 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MOClinic" >
         <activity
-            android:name=".ui.activities.second.SecondActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.activities.main2.MainActivity2"
-            android:exported="true"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/Theme.MOClinic.NoActionBar" />
-        <activity
             android:name=".ui.activities.main.MainActivity"
             android:exported="true" />
         <activity

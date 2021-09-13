@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.clinicapp.moclinic.R
+import com.clinicapp.moclinic.ui.activities.main.MainActivity
 
 class ClinicProfileFragment : Fragment() {
 
@@ -28,5 +29,11 @@ class ClinicProfileFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(ClinicProfileViewModel::class.java)
         // TODO: Use the ViewModel
     }
+    override fun onStart() {
+        super.onStart()
+        (activity as MainActivity?)!!.getAppBarMain()?.visibility = View.GONE
+        (activity as MainActivity?)!!.getAppBarDetails()?.visibility = View.VISIBLE
+        (activity as MainActivity?)!!.getAppBarTitleDetails()?.text = "Profile"
 
+    }
 }

@@ -23,7 +23,7 @@ class ProceduresAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TripsViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.patient_item, parent, false)
+            .inflate(R.layout.procedures_item, parent, false)
 
         return TripsViewHolder(view)
 

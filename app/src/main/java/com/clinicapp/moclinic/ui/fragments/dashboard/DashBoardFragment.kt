@@ -30,12 +30,7 @@ class DashBoardFragment : Fragment() {
         // TODO: Use the ViewModel
     }
 
-    override fun onStart() {
-        super.onStart()
-        (activity as MainActivity?)!!.getAppBarMain()?.visibility = View.VISIBLE
-        (activity as MainActivity?)!!.getAppBarDetails()?.visibility = View.GONE
-        (activity as MainActivity?)!!.getAppBarTitleMain()?.text = "Dashboard"
-    }
+
 
 
 }

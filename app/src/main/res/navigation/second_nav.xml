@@ -7,8 +7,8 @@
     <fragment
         android:id="@+id/dashBoardFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.dashboard.DashBoardFragment"
-        android:label="dash_board_fragment"
-        tools:layout="@layout/dash_board_fragment" >
+        android:label="DashBoard"
+        tools:layout="@layout/dash_board_fragment">
         <action
             android:id="@+id/action_dashBoardFragment_to_addScheduleExistingFragment"
             app:destination="@id/addScheduleExistingFragment" />
@@ -22,18 +22,18 @@
     <fragment
         android:id="@+id/appointmentListFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.appointment_list.AppointmentListFragment"
-        android:label="appointment_list_fragment"
+        android:label="Appointment List"
         tools:layout="@layout/appointment_list_fragment" />
     <fragment
         android:id="@+id/financeFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.finance.FinanceFragment"
-        android:label="finance_fragment"
+        android:label="Finance"
         tools:layout="@layout/finance_fragment" />
     <fragment
         android:id="@+id/patientFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.patient.PatientFragment"
         android:label="patient_fragment"
-        tools:layout="@layout/patient_fragment" >
+        tools:layout="@layout/patient_fragment">
         <action
             android:id="@+id/action_patientFragment_to_patientDetailsFragment"
             app:destination="@id/patientDetailsFragment" />
@@ -41,7 +41,7 @@
     <fragment
         android:id="@+id/myClinicFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.my_clinic.MyClinicFragment"
-        android:label="MyClinicFragment"
+        android:label="My Clinic"
         tools:layout="@layout/my_clinic_fragment">
         <action
             android:id="@+id/action_myClinicFragment_to_clinicProfileFragment"
@@ -65,8 +65,8 @@
     <fragment
         android:id="@+id/patientDetailsFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.patient_details.PatientDetailsFragment"
-        android:label="patient_details_fragment"
-        tools:layout="@layout/patient_details_fragment" >
+        android:label="Patient Details"
+        tools:layout="@layout/patient_details_fragment">
         <action
             android:id="@+id/action_patientDetailsFragment_to_addEditPatientProfileFragment"
             app:destination="@id/addEditPatientProfileFragment" />
@@ -77,13 +77,13 @@
     <fragment
         android:id="@+id/clinicProfileFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.clinic_profile.ClinicProfileFragment"
-        android:label="clinic_profile_fragment"
+        android:label="Clinic_Profile"
         tools:layout="@layout/clinic_profile_fragment" />
     <fragment
         android:id="@+id/drugListFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.drug_list.DrugListFragment"
-        android:label="drug_list_fragment"
-        tools:layout="@layout/drug_list_fragment" >
+        android:label="Drug List"
+        tools:layout="@layout/drug_list_fragment">
         <action
             android:id="@+id/action_drugListFragment_to_addDrugFragment"
             app:destination="@id/addDrugFragment" />
@@ -91,8 +91,8 @@
     <fragment
         android:id="@+id/proceduresFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.procedures.ProceduresFragment"
-        android:label="procedures_fragment"
-        tools:layout="@layout/procedures_fragment" >
+        android:label="Procedures"
+        tools:layout="@layout/procedures_fragment">
         <action
             android:id="@+id/action_proceduresFragment_to_addProcedureFragment"
             app:destination="@id/addProcedureFragment" />
@@ -100,38 +100,38 @@
     <fragment
         android:id="@+id/addDrugFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.drug_list.add_drug.AddDrugFragment"
-        android:label="add_drug_fragment"
+        android:label="Add Drug"
         tools:layout="@layout/add_drug_fragment" />
     <fragment
         android:id="@+id/addEditPatientProfileFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.add_edit_patient_profile.AddEditPatientProfileFragment"
-        android:label="add_edit_patient_profile_fragment"
+        android:label="Add/Edit Patient"
         tools:layout="@layout/add_edit_patient_profile_fragment" />
     <fragment
         android:id="@+id/addProcedureFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.add_procedures.AddProcedureFragment"
-        android:label="add_procedure_fragment"
+        android:label="Add Procedure"
         tools:layout="@layout/add_procedure_fragment" />
     <fragment
         android:id="@+id/addScheduleExistingFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.add_schedule_existing.AddScheduleExistingFragment"
-        android:label="add_schedule_existing_fragment"
+        android:label="Add Schedule"
         tools:layout="@layout/add_schedule_existing_fragment" />
     <fragment
         android:id="@+id/addScheduleNewFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.add_schedule_new.AddScheduleNewFragment"
-        android:label="add_schedule_new_fragment"
+        android:label="Add Schedule"
         tools:layout="@layout/add_schedule_new_fragment" />
     <fragment
         android:id="@+id/addScheduleSelectFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.add_schedule_select_patient.AddScheduleSelectFragment"
-        android:label="add_schedule_select_fragment"
+        android:label="Add Schedule"
         tools:layout="@layout/add_schedule_select_fragment" />
     <fragment
         android:id="@+id/medicalHistoryFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.medical_history.MedicalHistoryFragment"
-        android:label="medical_history_fragment"
-        tools:layout="@layout/medical_history_fragment" >
+        android:label="Medical History"
+        tools:layout="@layout/medical_history_fragment">
         <action
             android:id="@+id/action_medicalHistoryFragment_to_addMedicalHistoryFragment"
             app:destination="@id/addMedicalHistoryFragment" />
@@ -142,18 +142,18 @@
     <fragment
         android:id="@+id/addMedicalHistoryFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.medical_history.add_medical_history.AddMedicalHistoryFragment"
-        android:label="add_medical_history_fragment"
+        android:label="Add Medical History"
         tools:layout="@layout/add_medical_history_fragment" />
     <fragment
         android:id="@+id/medicalHistoryDetailsFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.medical_history.medical_history_details.MedicalHistoryDetailsFragment"
-        android:label="medical_history_details_fragment"
+        android:label="Medical History Details"
         tools:layout="@layout/medical_history_details_fragment" />
     <fragment
         android:id="@+id/insuranceFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.insurance.InsuranceFragment"
-        android:label="insurance_fragment"
-        tools:layout="@layout/insurance_fragment" >
+        android:label="Insurance"
+        tools:layout="@layout/insurance_fragment">
         <action
             android:id="@+id/action_insuranceFragment_to_addInsuranceFragment"
             app:destination="@id/addInsuranceFragment" />
@@ -161,18 +161,18 @@
     <fragment
         android:id="@+id/addInsuranceFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.insurance.add_insurance.AddInsuranceFragment"
-        android:label="add_insurance_fragment"
+        android:label="Add Insurance"
         tools:layout="@layout/add_insurance_fragment" />
     <fragment
         android:id="@+id/paymentMethodFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.payment_method.PaymentMethodFragment"
-        android:label="payment_method_fragment"
+        android:label="Payment Method"
         tools:layout="@layout/payment_method_fragment" />
     <fragment
         android:id="@+id/vaccineFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.vaccines.VaccineFragment"
-        android:label="vaccine_fragment"
-        tools:layout="@layout/vaccine_fragment" >
+        android:label="Vaccine"
+        tools:layout="@layout/vaccine_fragment">
         <action
             android:id="@+id/action_vaccineFragment_to_addVaccineFragment"
             app:destination="@id/addVaccineFragment" />
@@ -180,6 +180,6 @@
     <fragment
         android:id="@+id/addVaccineFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.vaccines.add_vaccine.AddVaccineFragment"
-        android:label="add_vaccine_fragment"
+        android:label="Add Vaccine"
         tools:layout="@layout/add_vaccine_fragment" />
 </navigation>

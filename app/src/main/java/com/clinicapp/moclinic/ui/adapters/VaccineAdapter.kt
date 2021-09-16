@@ -11,11 +11,11 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.clinicapp.moclinic.R
 
-class DrugAdapter(
+class VaccineAdapter(
     var context: Context?,
     var activity: Activity?
 ) :
-    RecyclerView.Adapter<DrugAdapter.TripsViewHolder>() {
+    RecyclerView.Adapter<VaccineAdapter.TripsViewHolder>() {
 
     /* var data = list
          set(value) {

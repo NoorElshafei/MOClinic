@@ -11,11 +11,11 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.clinicapp.moclinic.R
 
-class DrugAdapter(
+class InsuranceAdapter(
     var context: Context?,
     var activity: Activity?
 ) :
-    RecyclerView.Adapter<DrugAdapter.TripsViewHolder>() {
+    RecyclerView.Adapter<InsuranceAdapter.TripsViewHolder>() {
 
     /* var data = list
          set(value) {
@@ -25,7 +25,7 @@ class DrugAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TripsViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.drug_item, parent, false)
+            .inflate(R.layout.item_insurance, parent, false)
 
         return TripsViewHolder(view)
 

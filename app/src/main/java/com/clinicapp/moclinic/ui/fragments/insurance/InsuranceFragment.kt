@@ -6,8 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.clinicapp.moclinic.R
 import com.clinicapp.moclinic.databinding.InsuranceFragmentBinding
 import com.clinicapp.moclinic.ui.activities.main.MainActivity
+import com.clinicapp.moclinic.ui.adapters.InsuranceAdapter
 
 class InsuranceFragment : Fragment() {
     private var binding: InsuranceFragmentBinding? = null
@@ -31,14 +36,24 @@ class InsuranceFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(InsuranceViewModel::class.java)
         // TODO: Use the ViewModel
+        onClick()
+
+        binding!!.insuranceRecycler.layoutManager =
+            LinearLayoutManager(context, RecyclerView.VERTICAL, false)
+
+        val insuranceAdapter = InsuranceAdapter(context, activity)
+
+        binding!!.insuranceRecycler.adapter = insuranceAdapter
 
     }
 
-    override fun onStart() {
-        super.onStart()
-        (activity as MainActivity?)!!.getAppBarMain()?.visibility = View.GONE
-        (activity as MainActivity?)!!.getAppBarDetails()?.visibility = View.VISIBLE
-        (activity as MainActivity?)!!.getAppBarTitleDetails()?.text = "Insurance"
-    }
 
+
+    private fun onClick() {
+        binding?.addInsurance?.setOnClickListener {
+            findNavController().navigate(R.id.action_insuranceFragment_to_addInsuranceFragment)
+        }
+
+
+    }
 }

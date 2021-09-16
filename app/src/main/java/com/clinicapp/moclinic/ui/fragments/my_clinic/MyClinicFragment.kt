@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.clinicapp.moclinic.R
 import com.clinicapp.moclinic.databinding.MyClinicFragmentBinding
-import com.clinicapp.moclinic.ui.activities.main.MainActivity
 
 class MyClinicFragment : Fragment() {
     private var binding: MyClinicFragmentBinding? = null
@@ -33,14 +32,6 @@ class MyClinicFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(MyClinicViewModel::class.java)
         // TODO: Use the ViewModel
         onClick()
-    }
-
-    override fun onStart() {
-        super.onStart()
-        (activity as MainActivity?)!!.getAppBarMain()?.visibility = View.VISIBLE
-        (activity as MainActivity?)!!.getAppBarDetails()?.visibility = View.GONE
-        (activity as MainActivity?)!!.getAppBarTitleMain()?.text = "My Clinic"
-
     }
 
 

@@ -40,13 +40,7 @@ class PatientDetailsFragment : Fragment() {
     }
 
 
-    override fun onStart() {
-        super.onStart()
-        (activity as MainActivity?)!!.getAppBarMain()?.visibility = View.GONE
-        (activity as MainActivity?)!!.getAppBarDetails()?.visibility = View.VISIBLE
-        (activity as MainActivity?)!!.getAppBarTitleDetails()?.text = "Patient Details"
 
-    }
 
 
     private fun onClick() {

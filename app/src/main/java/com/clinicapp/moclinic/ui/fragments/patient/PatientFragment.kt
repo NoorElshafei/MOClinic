@@ -45,13 +45,7 @@ class PatientFragment : Fragment() {
 
     }
 
-    override fun onStart() {
-        super.onStart()
-        (activity as MainActivity?)!!.getAppBarMain()?.visibility = View.VISIBLE
-        (activity as MainActivity?)!!.getAppBarDetails()?.visibility = View.GONE
-        (activity as MainActivity?)!!.getAppBarTitleMain()?.text = "Patient List"
 
-    }
 
 
 }

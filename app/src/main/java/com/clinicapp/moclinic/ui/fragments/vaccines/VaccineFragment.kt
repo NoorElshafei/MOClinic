@@ -6,8 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.clinicapp.moclinic.R
 import com.clinicapp.moclinic.databinding.VaccineFragmentBinding
-import com.clinicapp.moclinic.ui.activities.main.MainActivity
+import com.clinicapp.moclinic.ui.adapters.VaccineAdapter
 
 class VaccineFragment : Fragment() {
     private var binding: VaccineFragmentBinding? = null
@@ -30,13 +34,24 @@ class VaccineFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(VaccineViewModel::class.java)
         // TODO: Use the ViewModel
+        onClick()
+
+        binding!!.vaccineRecycler.layoutManager =
+            LinearLayoutManager(context, RecyclerView.VERTICAL, false)
+
+        val vaccineAdapter = VaccineAdapter(context, activity)
+
+        binding!!.vaccineRecycler.adapter = vaccineAdapter
+
     }
 
-    override fun onStart() {
-        super.onStart()
-        (activity as MainActivity?)!!.getAppBarMain()?.visibility = View.GONE
-        (activity as MainActivity?)!!.getAppBarDetails()?.visibility = View.VISIBLE
-        (activity as MainActivity?)!!.getAppBarTitleDetails()?.text = "Vaccine"
+
+
+    private fun onClick() {
+        binding?.addVaccine?.setOnClickListener {
+            findNavController().navigate(R.id.action_vaccineFragment_to_addVaccineFragment)
+        }
+
 
     }
 

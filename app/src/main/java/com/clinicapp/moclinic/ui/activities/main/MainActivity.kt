@@ -1,18 +1,19 @@
 package com.clinicapp.moclinic.ui.activities.main
 
+
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.clinicapp.moclinic.R
 import com.clinicapp.moclinic.databinding.ActivityMainBinding
-import com.google.android.material.appbar.AppBarLayout
+import com.google.android.material.navigation.NavigationView
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -26,58 +27,36 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(binding!!.root)
 
 
-        //setSupportActionBar(toolbar)
-        navController = findNavController(R.id.nav_host_fragment1)
-        //setupActionBarWithNavController(navController!!,drawer_layout)
-        binding!!.navView.setupWithNavController(navController!!)
-        appBarConfiguration = AppBarConfiguration(navController!!.graph, binding!!.drawerLayout)
+        setSupportActionBar(binding!!.contentLayout.toolbar)
 
 
-        binding!!.contentLayout.menuImage.setOnClickListener(this)
-        binding!!.contentLayout.backImage.setOnClickListener(this)
+        val drawerLayout: DrawerLayout = binding!!.drawerLayout
+        val navView: NavigationView = binding!!.navView
+        val navController = findNavController(R.id.nav_host_fragment1)
+
+        appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.dashBoardFragment,
+                R.id.myClinicFragment,
+                R.id.patientFragment,
+                R.id.appointmentListFragment,
+                R.id.financeFragment
+            ), drawerLayout
+        )
+        setupActionBarWithNavController(navController, appBarConfiguration!!)
+        navView.setupWithNavController(navController)
+
+    }
+
+
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.nav_host_fragment1)
+        return navController.navigateUp(appBarConfiguration!!) || super.onSupportNavigateUp()
     }
 
     override fun onClick(v: View?) {
-        when (v) {
-            binding!!.contentLayout.menuImage -> {
-                if (getDrawer()!!.isDrawerOpen(GravityCompat.START)) {
-                    getDrawer()!!.closeDrawer(GravityCompat.START)
-                } else {
-                    getDrawer()!!.openDrawer(GravityCompat.START)
-                }
-            }
-            binding!!.contentLayout.backImage -> {
-                onBackPressed()
-            }
-        }
-    }
 
-    private fun getDrawer(): DrawerLayout? {
-        return binding?.drawerLayout
-    }
-
-    fun getAppBarMain(): AppBarLayout? {
-        return binding?.contentLayout?.appBarContainer
-    }
-
-    fun getAppBarDetails(): AppBarLayout? {
-        return binding?.contentLayout?.appBarContainer2
-    }
-
-    fun getAppBarTitleMain(): TextView? {
-        return binding?.contentLayout?.appBarTitle
-    }
-
-    fun getAppBarTitleDetails(): TextView? {
-        return binding?.contentLayout?.appBarTitle1
     }
 
 
-    override fun onBackPressed() {
-        if (getDrawer()!!.isDrawerOpen(GravityCompat.START)) {
-            getDrawer()!!.closeDrawer(GravityCompat.START)
-        } else {
-            super.onBackPressed()
-        }
-    }
 }

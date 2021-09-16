@@ -29,11 +29,5 @@ class AddEditPatientProfileFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(AddEditPatientProfileViewModel::class.java)
         // TODO: Use the ViewModel
     }
-    override fun onStart() {
-        super.onStart()
-        (activity as MainActivity?)!!.getAppBarMain()?.visibility = View.GONE
-        (activity as MainActivity?)!!.getAppBarDetails()?.visibility = View.VISIBLE
-        (activity as MainActivity?)!!.getAppBarTitleDetails()?.text = "Add Patient"
 
-    }
 }

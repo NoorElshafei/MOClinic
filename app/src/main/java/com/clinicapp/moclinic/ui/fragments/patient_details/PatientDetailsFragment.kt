@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.clinicapp.moclinic.R
 import com.clinicapp.moclinic.databinding.PatientDetailsFragmentBinding
-import com.clinicapp.moclinic.ui.activities.main.MainActivity
 
 class PatientDetailsFragment : Fragment() {
     private var binding: PatientDetailsFragmentBinding? = null
@@ -26,10 +25,8 @@ class PatientDetailsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = PatientDetailsFragmentBinding.inflate(inflater, container, false)
+
         return binding!!.root
-
-
-        return inflater.inflate(R.layout.patient_details_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -40,9 +37,6 @@ class PatientDetailsFragment : Fragment() {
     }
 
 
-
-
-
     private fun onClick() {
         binding?.editProfileButton?.setOnClickListener {
             findNavController().navigate(R.id.action_patientDetailsFragment_to_addEditPatientProfileFragment)
@@ -50,7 +44,15 @@ class PatientDetailsFragment : Fragment() {
         binding?.medicalHistory?.setOnClickListener {
             findNavController().navigate(R.id.action_patientDetailsFragment_to_medicalHistoryFragment)
         }
-
+        binding?.vitalSigns?.setOnClickListener {
+            findNavController().navigate(R.id.action_patientDetailsFragment_to_vitalSignsFragment)
+        }
+        binding?.medicalNotes?.setOnClickListener {
+            findNavController().navigate(R.id.action_patientDetailsFragment_to_medicalNotesFragment)
+        }
+        binding?.vaccines?.setOnClickListener {
+            findNavController().navigate(R.id.action_patientDetailsFragment_to_vaccinePateintFragment)
+        }
     }
 
 

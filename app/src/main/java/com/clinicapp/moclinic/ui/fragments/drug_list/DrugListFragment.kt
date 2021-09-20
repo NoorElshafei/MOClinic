@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.clinicapp.moclinic.R
 import com.clinicapp.moclinic.databinding.DrugListFragmentBinding
-import com.clinicapp.moclinic.ui.activities.main.MainActivity
 import com.clinicapp.moclinic.ui.adapters.DrugAdapter
 
 class DrugListFragment : Fragment() {
@@ -49,7 +48,5 @@ class DrugListFragment : Fragment() {
             findNavController().navigate(R.id.action_drugListFragment_to_addDrugFragment)
         }
     }
-
-
 
 }

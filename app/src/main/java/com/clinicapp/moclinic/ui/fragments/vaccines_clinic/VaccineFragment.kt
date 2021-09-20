@@ -1,4 +1,4 @@
-package com.clinicapp.moclinic.ui.fragments.vaccines
+package com.clinicapp.moclinic.ui.fragments.vaccines_clinic
 
 import android.os.Bundle
 import android.view.LayoutInflater

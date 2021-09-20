@@ -1,4 +1,4 @@
-package com.clinicapp.moclinic.ui.fragments.vaccines
+package com.clinicapp.moclinic.ui.fragments.vaccines_clinic
 
 import androidx.lifecycle.ViewModel
 

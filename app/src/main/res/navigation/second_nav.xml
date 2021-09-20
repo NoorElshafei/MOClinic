@@ -32,7 +32,7 @@
     <fragment
         android:id="@+id/patientFragment"
         android:name="com.clinicapp.moclinic.ui.fragments.patient.PatientFragment"
-        android:label="patient_fragment"
+        android:label="Patient List"
         tools:layout="@layout/patient_fragment">
         <action
             android:id="@+id/action_patientFragment_to_patientDetailsFragment"
@@ -73,6 +73,15 @@
         <action
             android:id="@+id/action_patientDetailsFragment_to_medicalHistoryFragment"
             app:destination="@id/medicalHistoryFragment" />
+        <action
+            android:id="@+id/action_patientDetailsFragment_to_vitalSignsFragment"
+            app:destination="@id/vitalSignsFragment" />
+        <action
+            android:id="@+id/action_patientDetailsFragment_to_medicalNotesFragment"
+            app:destination="@id/medicalNotesFragment" />
+        <action
+            android:id="@+id/action_patientDetailsFragment_to_vaccinePateintFragment"
+            app:destination="@id/vaccinePateintFragment" />
     </fragment>
     <fragment
         android:id="@+id/clinicProfileFragment"
@@ -170,7 +179,7 @@
         tools:layout="@layout/payment_method_fragment" />
     <fragment
         android:id="@+id/vaccineFragment"
-        android:name="com.clinicapp.moclinic.ui.fragments.vaccines.VaccineFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.vaccines_clinic.VaccineFragment"
         android:label="Vaccine"
         tools:layout="@layout/vaccine_fragment">
         <action
@@ -179,7 +188,49 @@
     </fragment>
     <fragment
         android:id="@+id/addVaccineFragment"
-        android:name="com.clinicapp.moclinic.ui.fragments.vaccines.add_vaccine.AddVaccineFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.vaccines_clinic.add_vaccine.AddVaccineFragment"
         android:label="Add Vaccine"
         tools:layout="@layout/add_vaccine_fragment" />
+    <fragment
+        android:id="@+id/vitalSignsFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.vital_signs.VitalSignsFragment"
+        android:label="Vital Signs"
+        tools:layout="@layout/vital_signs_fragment" >
+        <action
+            android:id="@+id/action_vitalSignsFragment_to_addVitalSignsFragment"
+            app:destination="@id/addVitalSignsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addVitalSignsFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.vital_signs.add_vital_signs.AddVitalSignsFragment"
+        android:label="Add Vital Signs"
+        tools:layout="@layout/add_vital_signs_fragment" />
+    <fragment
+        android:id="@+id/medicalNotesFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.medical_notes.MedicalNotesFragment"
+        android:label="MedicalNotesFragment"
+        tools:layout="@layout/medical_notes_fragment">
+        <action
+            android:id="@+id/action_medicalNotesFragment_to_addMedicalNotesFragment"
+            app:destination="@id/addMedicalNotesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMedicalNotesFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.medical_notes.add_medical_notes.AddMedicalNotesFragment"
+        android:label="add_medical_notes_fragment"
+        tools:layout="@layout/add_medical_notes_fragment" />
+    <fragment
+        android:id="@+id/vaccinePateintFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.vaccine_patient.VaccinePateintFragment"
+        android:label="fragment_vaccine_pateint"
+        tools:layout="@layout/fragment_vaccine_pateint" >
+        <action
+            android:id="@+id/action_vaccinePateintFragment_to_addVaccinePatientFragment"
+            app:destination="@id/addVaccinePatientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addVaccinePatientFragment"
+        android:name="com.clinicapp.moclinic.ui.fragments.vaccine_patient.add_vaccine_patient.AddVaccinePatientFragment"
+        android:label="add_vaccine_patient_fragment"
+        tools:layout="@layout/add_vaccine_patient_fragment" />
 </navigation>

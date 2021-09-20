@@ -44,7 +44,7 @@
                 <Button
                     android:id="@+id/edit_profile_button"
                     android:layout_width="wrap_content"
-                    android:layout_height="30dp"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/name_person"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="6dp"
@@ -390,7 +390,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/treatment_plan"
+                android:id="@+id/vital_signs"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginStart="12dp"
@@ -421,14 +421,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/opensans_bold"
-                            android:text="Treatment Plan"
+                            android:text="Vital signs"
                             android:textColor="#B2000000" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/opensans_regular"
-                            android:text="Your patient's treatment plans"
+                            android:text="Your patient Signs Records"
                             android:textColor="#B2000000" />
                     </LinearLayout>
 
@@ -441,60 +441,9 @@
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/dental_chart"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="12dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:id="@+id/icon3"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="24dp"
-                        android:src="@drawable/ic_baseline_history_24" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="24dp"
-                        android:layout_toEndOf="@id/icon3"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/opensans_bold"
-                            android:text="Dental Chart"
-                            android:textColor="#B2000000" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/opensans_regular"
-                            android:text="Edit patient's chart"
-                            android:textColor="#B2000000" />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/ic_baseline_chevron_right_24" />
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/dental_notes"
+                android:id="@+id/medical_notes"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginStart="12dp"
@@ -525,7 +474,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/opensans_bold"
-                            android:text="Dental Notes"
+                            android:text="Medical Notes"
                             android:textColor="#B2000000" />
 
                         <TextView
@@ -533,6 +482,58 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/opensans_regular"
                             android:text="Review notes"
+                            android:textColor="#B2000000" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_baseline_chevron_right_24" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/vaccines"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/icon45"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="24dp"
+                        android:src="@drawable/ic_baseline_history_24" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="24dp"
+                        android:layout_toEndOf="@id/icon45"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_bold"
+                            android:text="Vaccines"
+                            android:textColor="#B2000000" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_regular"
+                            android:text="Your patient's Vaccination Records"
                             android:textColor="#B2000000" />
                     </LinearLayout>
 
@@ -585,6 +586,58 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/opensans_regular"
                             android:text="Your patient's prescription records"
+                            android:textColor="#B2000000" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_baseline_chevron_right_24" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/appointment_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/icon46"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="24dp"
+                        android:src="@drawable/ic_baseline_history_24" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="24dp"
+                        android:layout_toEndOf="@id/icon46"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_bold"
+                            android:text="Appointment Schedule"
+                            android:textColor="#B2000000" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_regular"
+                            android:text="Your patient's next appointment list"
                             android:textColor="#B2000000" />
                     </LinearLayout>
 

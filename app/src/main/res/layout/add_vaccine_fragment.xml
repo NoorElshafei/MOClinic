@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.fragments.vaccines.add_vaccine.AddVaccineFragment">
+    tools:context=".ui.fragments.vaccines_clinic.add_vaccine.AddVaccineFragment">
 
     <TextView
         android:layout_width="wrap_content"

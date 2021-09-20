@@ -7,6 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
 
 
 
@@ -14,6 +15,7 @@
     <color name="colorPrimary">#18A2EB</color>
     <color name="colorPrimaryDark">#18A2EB</color>
     <color name="colorAccent">#B86CD9</color>
+    <color name="bink">#B86CD9</color>
     <color name="grey">#838383</color>
     <color name="grey_20_opacity">#33838383</color>
     <color name="binkDark">#77458C</color>

@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/drawable/ic__634986_moneys_financial_layers_money_icon.xml" value="0.3333333333333333" />
+        <entry key="..\:/android_projects/MOClinic/app/src/main/res/drawable/ic__850859_document_file_page_paper_pdf_icon.xml" value="0.37083333333333335" />
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/drawable/ic_baseline_add_24_white.xml" value="0.2861111111111111" />
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/drawable/ic_baseline_delete_24_bink.xml" value="0.3333333333333333" />
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/drawable/ic_edit.xml" value="0.3333333333333333" />
@@ -11,6 +12,7 @@
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/drawable/side_nav_bar.xml" value="0.32592592592592595" />
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/layout/activity_first.xml" value="0.3546875" />
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/android_projects/MOClinic/app/src/main/res/layout/activity_prescription.xml" value="0.3546875" />
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/layout/activity_second.xml" value="0.18333333333333332" />
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/layout/add_drug_fragment.xml" value="0.340625" />
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/layout/add_edit_patient_profile_fragment.xml" value="0.3546875" />
@@ -38,6 +40,7 @@
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/layout/item_insurance.xml" value="0.25" />
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/layout/item_medical_history.xml" value="0.3546875" />
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/layout/item_medical_notes.xml" value="0.3546875" />
+        <entry key="..\:/android_projects/MOClinic/app/src/main/res/layout/item_prescription.xml" value="0.3546875" />
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/layout/item_treatement_plan.xml" value="0.3546875" />
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/layout/item_vaccine_patient.xml" value="0.3546875" />
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/layout/item_vital_signs.xml" value="0.33" />
@@ -50,6 +53,7 @@
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/layout/patient_fragment.xml" value="0.3546875" />
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/layout/patient_item.xml" value="0.3546875" />
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/layout/payment_method_fragment.xml" value="0.22" />
+        <entry key="..\:/android_projects/MOClinic/app/src/main/res/layout/prescription_fragment.xml" value="0.3546875" />
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/layout/procedures_fragment.xml" value="0.3546875" />
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/layout/procedures_item.xml" value="0.25" />
         <entry key="..\:/android_projects/MOClinic/app/src/main/res/layout/sign_in_fragment.xml" value="0.25" />
